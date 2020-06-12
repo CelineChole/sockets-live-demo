@@ -17,9 +17,9 @@ const renderUsers = () => {
   users.forEach((user) => {
     const userCard = document.createElement("div");
     userCard.classList.add("user-card");
-    userCard.style.backgroundColor = user.favColor;
     userCard.innerHTML = `
-      <img src="https://robohash.org/${user.name}?set=set4" />
+      <img src="https://www.countryflags.io/${user.favDestination}/shiny/64.png">
+      <h4>ISO code: ${user.favDestination}</h4>
       <h2>${user.name}</h2>
     `;
     usersList.appendChild(userCard);
@@ -31,8 +31,8 @@ renderUsers();
 newUserForm.onsubmit = (event) => {
   event.preventDefault();
   const name = document.getElementById("new-user-name").value;
-  const favColor = document.getElementById("new-user-fav-color").value;
-  const newUser = { name, favColor };
+  const favDestination = document.getElementById("destination").value;
+  const newUser = { name, favDestination };
 
   // Update the local state
   users.push(newUser);
@@ -45,7 +45,7 @@ newUserForm.onsubmit = (event) => {
 
   // Clear the form
   document.getElementById("new-user-name").value = "";
-  document.getElementById("new-user-fav-color").value = "";
+  document.getElementById("new-user-fav-destination").value = "";
 };
 
 // When the socket first connects, let's sync up with the server.
