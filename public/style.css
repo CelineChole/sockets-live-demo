@@ -1,6 +1,8 @@
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 h1,
 h2 {
@@ -15,6 +17,11 @@ button[type="submit"] {
 }
 form {
   text-align: center;
+  background-color: aliceblue;
+  padding: 2rem;
+}
+input {
+  padding: 0.5rem;
 }
 #users-list {
   display: flex;
