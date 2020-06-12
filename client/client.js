@@ -32,6 +32,10 @@ newUserForm.onsubmit = (event) => {
   event.preventDefault();
   const name = document.getElementById("new-user-name").value;
   const favDestination = document.getElementById("destination").value;
+  if (!name || !favDestination) {
+    alert("Name and destination are mandatory");
+    return;
+  }
   const newUser = { name, favDestination };
 
   // Update the local state
