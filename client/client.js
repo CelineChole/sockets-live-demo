@@ -7,11 +7,10 @@ const socket = io(window.location.origin);
 const usersList = document.getElementById("users-list");
 const newUserForm = document.getElementById("new-user-form");
 
-// Here's our client-side data store! It's just an array.
+// Here's our client-side data store - it's an array
 let users = [];
 
-// Instead of React, how about we just re-render everything all the time!!!
-// ¯\_(ツ)_/¯
+// Instead of React, how about we just re-render everything all the time!
 const renderUsers = () => {
   usersList.innerHTML = "";
   users.forEach((user) => {
